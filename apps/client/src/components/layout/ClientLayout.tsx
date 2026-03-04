@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Building2, Menu, X } from "lucide-react"
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,9 +10,13 @@ export function ClientLayout({ children }: { children: React.ReactNode }) {
         <div className="container flex items-center justify-between py-4">
 
           {/* Logo */}
-         <Link href="/" className="text-xl font-bold tracking-tight">
-  Bet<span className="text-amber-500">Link</span>
-</Link>
+          <div className="flex items-center gap-2">
+            <Building2 className="h-7 w-7 text-amber-500" />
+            <Link href="/" className="text-xl tracking-tight">
+              <span className="text-black font-bold">Bet</span>
+              <span className="text-amber-500">Link</span>
+            </Link>
+          </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">

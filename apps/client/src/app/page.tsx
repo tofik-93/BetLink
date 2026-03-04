@@ -75,7 +75,7 @@ export default function HomePage() {
       {/* HOW IT WORKS */}
       <section className="py-24 bg-[#f7f7f7]">
         <div className="container text-center">
-          <h2 className="text-3xl font-serif font-semibold">
+          <h2 className="text-black font-serif font-semibold">
             How BetLink Works
           </h2>
           <p className="text-gray-500 mt-3">
@@ -92,7 +92,7 @@ export default function HomePage() {
                   <step.icon className="text-amber-500" />
                 </div>
 
-                <h3 className="font-semibold text-lg">{step.title}</h3>
+                <h3 className="font-semibold text-black">{step.title}</h3>
                 <p className="text-gray-500 text-sm mt-2">{step.desc}</p>
               </div>
             ))}
@@ -101,11 +101,11 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="container">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl font-serif font-semibold">
+              <h2 className="text-black font-serif font-semibold">
                 Featured Properties
               </h2>
               <p className="text-gray-500 mt-2">
@@ -121,7 +121,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-black grid md:grid-cols-3 gap-8">
             {mockProperties.slice(0, 3).map(p => (
               <PropertyCard key={p.id} property={p} />
             ))}
@@ -132,7 +132,7 @@ export default function HomePage() {
       {/* WHY */}
       <section className="py-24 bg-[#f7f7f7]">
         <div className="container max-w-xl text-center">
-          <h2 className="text-3xl font-serif font-semibold">
+          <h2 className="text-3xl font-serif font-semibold text-black">
             Why Choose BetLink?
           </h2>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
                 className="flex gap-3 bg-white border rounded-lg p-4 shadow-sm"
               >
                 <CheckCircle className="text-green-500 shrink-0 mt-1" />
-                {item}
+               <span className="text-gray-600">{item}</span> 
               </div>
             ))}
           </div>
